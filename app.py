@@ -40,7 +40,6 @@ numeric_transformer = Pipeline(
     ]
 )
 
-<<<<<<< HEAD
 # 7. 모델 학습
 # Logistic Regression 모델 추가
 model = LogisticRegression(
@@ -48,7 +47,6 @@ model = LogisticRegression(
     class_weight="balanced",  # 클래스 불균형 고려
     random_state=42           # 재현성 설정
 )
-=======
 # 7. 범주형 전처리
 # 결측치는 최빈값으로 채우고, One-Hot Encoding
 categorical_transformer = Pipeline(
@@ -83,15 +81,10 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # 11. 모델 학습
->>>>>>> origin/main
 model.fit(X_train, y_train)
 
 # 12. 평가
 y_pred = model.predict(X_test)
 
 acc = accuracy_score(y_test, y_pred)
-<<<<<<< HEAD
 print(f"Accuracy: {acc:.4f}")
-=======
-print(f"\nAccuracy: {acc:.4f}")
->>>>>>> origin/main
