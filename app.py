@@ -30,7 +30,12 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # 7. 모델 학습
-model = LogisticRegression(max_iter=1000)
+# Logistic Regression 모델 추가
+model = LogisticRegression(
+    max_iter=1000,
+    class_weight="balanced",  # 클래스 불균형 고려
+    random_state=42           # 재현성 설정
+)
 model.fit(X_train, y_train)
 
 # 8. 평가
