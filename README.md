@@ -1,63 +1,24 @@
-# 1조 - 1주차 스냅샷 repository
+# 3조 - 2주차
 
-재현 가능한 ML 개발환경 구축 (WSL/Conda/Docker)
-
-## 실행 방법
-
-### 1. 가상환경 생성 및 activate
-conda create -n bitamin-mlops-1 python=3.10 -y
-conda activate bitamin-mlops-1
-
-### 2. 패키지 설치
-pip install -r requirements.txt
-
-### 3. baseline 모델 실행
-python app.py
-
-### 4. Docker 이미지 빌드 및 실행
-docker build -t bitamin-mlops-1 .
-docker run bitamin-mlops-1
-
----
+git 실습
 
 ## 체크포인트별 결과
 
-### 체크포인트 1: conda 가상환경 생성 및 activate
-**명령어**: `conda create -n bitamin-mlops-1 python=3.10 -y` / `conda activate bitamin-mlops-1`
-**결과**: 프롬프트에 `(bitamin-mlops-1)` 환경명 표시 확인
+### 체크포인트 1: 조별 Repository 개설 및 1주차 결과물 Push
+<img width="625" height="661" alt="스크린샷 2026-09-23 203932" src="https://github.com/user-attachments/assets/59220903-0061-4816-858b-2f8b0da48a06" />
+<img width="642" height="232" alt="KakaoTalk_20260923_203850008" src="https://github.com/user-attachments/assets/f7e0d165-a6f4-4175-ab98-581dc9e97ab8" />
 
-### 체크포인트 2: requirements.txt 작성 후 설치
-**명령어**: `pip install -r requirements.txt`
-**결과**: pandas, scikit-learn, joblib 및 의존 패키지 정상 설치 확인 (`pip list`)
+### 체크포인트 2: 조원 전원이 각자 Branch 생성 후 작업
+<img width="357" height="80" alt="스크린샷 2026-09-23 204102" src="https://github.com/user-attachments/assets/6f3878e3-01a9-4482-ba75-f4566bb9dcb8" />
 
-### 체크포인트 3: baseline 모델 실행
-**명령어**: `python app.py`
-**결과**: `Accuracy: 0.7854`
+### 체크포인트 3: 조원 전원이 PR 생성 및 최소 1건 Review Comment
+<img width="921" height="345" alt="KakaoTalk_20260923_204016586" src="https://github.com/user-attachments/assets/b798a561-0537-4574-9996-301ae7e3ee2c" />
+<img width="631" height="644" alt="스크린샷 2026-09-23 201733" src="https://github.com/user-attachments/assets/7c03692f-2cd8-4f4f-b065-972dd48a91b0" />
 
-### 체크포인트 4: Dockerfile 작성 및 이미지 빌드
-**명령어**: `docker build -t bitamin-mlops-1 .`
-**결과**: `docker images`에 `bitamin-mlops-1:latest` (642MB) 표시 확인
+### 체크포인트 4: 모든 PR Merge 완료
+<img width="948" height="703" alt="KakaoTalk_20260923_204031813" src="https://github.com/user-attachments/assets/d910ef62-b402-4a4e-9721-dbf2139c0378" />
+<img width="426" height="227" alt="스크린샷 2026-09-23 203007" src="https://github.com/user-attachments/assets/1c2b22de-9be6-45c8-b104-04f4a6949004" />
 
-### 체크포인트 5: 컨테이너에서 baseline 모델 실행
-**명령어**: `docker run bitamin-mlops-1`
-**결과**: `Accuracy: 0.7854` (conda 환경과 동일한 결과, 컨테이너 재현성 확인)
-
----
-
-## 데이터셋
-Telco Customer Churn (`WA_FnUseC_TelcoCustomerChurn.csv`)
-- 7,043행 21열, 타깃 컬럼: `Churn`
-- `TotalCharges` 컬럼에 공백 문자로 된 결측치가 있어 전처리 시 숫자 변환 및 결측치 제거 필요
-
----
-
-## 심화 체크포인트
-
-### 심화 1: 빌드한 이미지를 Docker Hub에 push
-**명령어**: `docker tag bitamin-mlops-1 moonchowon/bitamin-mlops-1` / `docker push moonchowon/bitamin-mlops-1`
-**결과**: Docker Hub에 `moonchowon/bitamin-mlops-1` 이미지 업로드 완료
-**pull 방법**: `docker pull moonchowon/bitamin-mlops-1`
-
-### 심화 2: .dockerignore 적용으로 이미지 용량 축소
-**명령어**: `.dockerignore` 작성 후 `docker build -t bitamin-mlops-1-v2 .`
-**결과**: 불필요 파일(캐시, git 관련 등) 제외 설정 반영
+### 체크포인트 5: Merge Conflict 1건 이상 발생 및 해결
+<img width="613" height="560" alt="스크린샷 2026-09-23 202551" src="https://github.com/user-attachments/assets/6625c760-9539-4d1d-9c62-ee569e726903" />
+<img width="393" height="355" alt="스크린샷 2026-09-23 202928" src="https://github.com/user-attachments/assets/b3fdd344-5782-403e-9a1f-679e14477547" />
