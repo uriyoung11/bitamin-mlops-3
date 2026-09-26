@@ -5,6 +5,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.impute import SimpleImputer
 from sklearn.linear_model import LogisticRegression
+from sklearn.base import clone
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
 # 1. 데이터 로드
@@ -83,8 +85,24 @@ X_train, X_test, y_train, y_test = train_test_split(
 # 11. 모델 학습
 model.fit(X_train, y_train)
 
+# Random Forest도 같은 분할을 사용하며 독립된 전처리 객체를 학습한다.
+rf_model = Pipeline(steps=[
+    ("preprocessor", clone(preprocessor)),
+    ("classifier", RandomForestClassifier(
+        n_estimators=200,
+        class_weight="balanced",
+        random_state=42,
+        n_jobs=-1,
+    )),
+])
+rf_model.fit(X_train, y_train)
+
 # 12. 평가
 y_pred = model.predict(X_test)
 
 acc = accuracy_score(y_test, y_pred)
+print("[Logistic Regression]")
 print(f"Accuracy: {acc:.4f}")
+rf_pred = rf_model.predict(X_test)
+print("[Random Forest]")
+print(f"Accuracy: {accuracy_score(y_test, rf_pred):.4f}")
