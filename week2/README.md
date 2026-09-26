@@ -9,11 +9,11 @@
 | 항목 | 확인 내용 | 남은 확인 |
 |---|---|---|
 | 저장소 및 Push | Public, 1주차 파일과 이력 존재 | 완료 |
-| 조원별 Branch 작업 | main + 기능 브랜치 4개 존재 | RF·평가 브랜치의 작업 커밋 |
-| PR 및 Review | 전처리 #1, LR #2 병합; 당시 댓글은 일반 대화 댓글 | 모든 조원의 PR, 다른 조원이 제출한 코드 줄 리뷰 |
-| 모든 기능 PR Merge | #1, #2 병합 | RF·평가 PR과 보완 PR 리뷰·병합 |
+| 조원별 Branch 작업 | main + 기능 브랜치 4개 존재; RF 담당 0jin03의 4e8a951 Push | 평가 브랜치의 작업 커밋 |
+| PR 및 Review | 전처리 #1, LR #2 병합; RF #6 생성 및 리뷰 요청; 0jin03의 #2 코드 리뷰 제출 | 평가 PR과 다른 조원의 코드 줄 리뷰 |
+| 모든 기능 PR Merge | #1, #2 병합 | #4·#5·#6 및 평가 PR 리뷰·병합 |
 | Conflict 해결 | ccba95e에 마커가 포함됐고 ff27c8a에서 제거 | LR 설정이 덮어써지는 병합 오류를 수정 PR #4에서 보완 |
-| Issue 및 Convention | 추적 Issue #3 생성 | CONTRIBUTING 반영 및 Issue Timeline 커밋 링크 |
+| Issue 및 Convention | Issue #3 Timeline에 RF 커밋 4e8a951 연결 확인 | CONTRIBUTING main 반영 |
 | PR Template | 이 변경에 템플릿 추가 | main 반영 후 새 PR 작성 화면에서 자동 표시 |
 | Branch Protection | 확인 당시 Ruleset 없음 | 관리자 설정 및 타 조원 승인 전후 동작 확인 |
 
@@ -21,16 +21,18 @@
 
 ## 남은 역할별 진행
 
-RF·평가 담당자는 자신의 계정으로 기존 작업 브랜치를 가져오고 최신 main을 병합한 뒤 작업한다. 이미 본인 작업이 있는 경우 반드시 보존한다.
+RF 담당은 `0jin03`이며 [PR #6](https://github.com/uriyoung11/bitamin-mlops-3/pull/6)을 제출했다. RF 200개 트리, balanced 가중치, random_state 42를 사용한다. 실제 테스트 데이터 1,409건에서 Accuracy 0.7963을 확인했다. 학습 데이터 median과 imputer 통계 일치, 미지 범주·결측값 예측, LR/RF 전처리 객체 분리도 검증했다. `uriyoung11`에게 코드 리뷰를 요청한 상태다.
+
+평가 담당자는 자신의 계정으로 기존 작업 브랜치를 가져오고 최신 main을 병합한 뒤 작업한다. 이미 본인 작업이 있는 경우 반드시 보존한다.
 
 ```bash
 git fetch origin
-git switch feature/random-forest  # 또는 feature/evaluation-metrics
+git switch feature/evaluation-metrics
 git merge origin/main
 # 본인 역할의 코드 변경 후 실행
 python app.py
 git add app.py
-git commit -m "feat: add random forest model (#3)"
+git commit -m "feat: add evaluation metrics (#3)"
 git push origin HEAD
 ```
 
