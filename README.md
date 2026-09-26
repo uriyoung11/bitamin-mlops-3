@@ -2,6 +2,8 @@
 
 git 실습
 
+보완 진행과 심화 체크포인트는 [Week 2 진행 문서](week2/README.md), 협업 규칙은 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요.
+
 ## 체크포인트별 결과
 
 ### 체크포인트 1: 조별 Repository 개설 및 1주차 결과물 Push
