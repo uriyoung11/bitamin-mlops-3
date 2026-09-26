@@ -98,6 +98,7 @@ rf_model = Pipeline(steps=[
 rf_model.fit(X_train, y_train)
 
 # 12. 평가
+#복습과제
 y_pred = model.predict(X_test)
 
 acc = accuracy_score(y_test, y_pred)
