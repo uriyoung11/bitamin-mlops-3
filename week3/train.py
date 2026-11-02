@@ -13,7 +13,7 @@
 """
 import argparse
 from pathlib import Path
-
+import joblib
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
@@ -144,6 +144,10 @@ def main():
 
     valid_metrics = evaluate(model, X_valid, y_valid)
     print_metrics("valid", valid_metrics)
+
+    model_path = ROOT / "week4" / "churn_model.joblib"
+    joblib.dump(model, model_path)
+    print(f"Model saved to: {model_path}")
 
 
 if __name__ == "__main__":
