@@ -51,7 +51,8 @@ def load_splits():
     df = df.drop(columns=["customerID"])
     df["TotalCharges"] = pd.to_numeric(df["TotalCharges"], errors="coerce")  # 공백 → NaN
     X = df.drop(columns=["Churn"])
-    y = (df["Churn"] == "Yes").astype(int)  # 1 = 이탈(churn), 0 = 유지
+    X = df[["tenure", "MonthlyCharges", "Contract"]]
+    y = (df["Churn"] == "Yes").astype(int) # 1 = 이탈(churn), 0 = 유지
 
     X_trval, X_test, y_trval, y_test = train_test_split(X, y, test_size=0.2, random_state=SPLIT_SEED)
     X_train, X_valid, y_train, y_valid = train_test_split(
