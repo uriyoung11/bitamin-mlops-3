@@ -23,7 +23,7 @@ git 실습
 <img width="613" height="560" alt="스크린샷 2026-09-23 202551" src="https://github.com/user-attachments/assets/6625c760-9539-4d1d-9c62-ee569e726903" />
 <img width="393" height="355" alt="스크린샷 2026-09-23 202928" src="https://github.com/user-attachments/assets/b3fdd344-5782-403e-9a1f-679e14477547" />
 
-# 3조 - 4주차
+# 3조 - 4주차 (김영진)
 
 ## 체크포인트 1. FastAPI 서버 기동 및 Swagger 접속
 
