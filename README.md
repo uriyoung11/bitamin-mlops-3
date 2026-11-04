@@ -50,3 +50,19 @@ git 실습
 ## 체크포인트 5. Postman으로 동일 요청 테스트
 
 ![체크포인트 5-1](assets/week4/checkpoint-5-1.jpg)
+
+# 3조 - 4주차 (이지원)
+## 체크포인트 1. FastAPI 서버 기동 및 Swagger 접속
+<img width="638" height="299" alt="스크린샷 2026-11-04 192854" src="https://github.com/user-attachments/assets/ff53f6ea-5b8c-4921-bab8-f01194f00169" />
+
+## 체크포인트 2. 고객 정보 입력용 Pydantic 스키마 정의
+<img width="589" height="635" alt="스크린샷 2026-11-04 193352" src="https://github.com/user-attachments/assets/efa31460-8942-48ff-a87a-142a483c16b1" />
+
+## 체크포인트 3. churn_model.joblib 로드 및 /predict 구현
+<img width="277" height="55" alt="스크린샷 2026-11-04 193453" src="https://github.com/user-attachments/assets/668b53dd-2d1e-46e7-a4eb-be29273cb4ab" />
+
+## 체크포인트 4. Swagger에서 예측 요청 성공
+<img width="557" height="117" alt="스크린샷 2026-11-04 194026" src="https://github.com/user-attachments/assets/55fa4cee-19f3-4d38-83dd-05607a0203ba" />
+
+## 체크포인트 5. Postman으로 동일 요청 테스트
+<img width="471" height="106" alt="스크린샷 2026-11-04 195113" src="https://github.com/user-attachments/assets/8dc68123-d206-4811-99e8-f40556da89ac" />
