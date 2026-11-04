@@ -22,3 +22,31 @@ git 실습
 ### 체크포인트 5: Merge Conflict 1건 이상 발생 및 해결
 <img width="613" height="560" alt="스크린샷 2026-09-23 202551" src="https://github.com/user-attachments/assets/6625c760-9539-4d1d-9c62-ee569e726903" />
 <img width="393" height="355" alt="스크린샷 2026-09-23 202928" src="https://github.com/user-attachments/assets/b3fdd344-5782-403e-9a1f-679e14477547" />
+
+# 4주차
+
+## 체크포인트 1. FastAPI 서버 기동 및 Swagger 접속
+
+![체크포인트 1-1](assets/week4/checkpoint-1-1.jpg)
+
+## 체크포인트 2. 고객 정보 입력용 Pydantic 스키마 정의
+
+![체크포인트 2-1](assets/week4/checkpoint-2-1.jpg)
+
+## 체크포인트 3. churn_model.joblib 로드 및 /predict 구현
+
+![체크포인트 3-1](assets/week4/checkpoint-3-1.jpg)
+
+## 체크포인트 4. Swagger에서 예측 요청 성공
+
+![체크포인트 4-1](assets/week4/checkpoint-4-1.jpg)
+
+![체크포인트 4-2](assets/week4/checkpoint-4-2.jpg)
+
+![체크포인트 4-3](assets/week4/checkpoint-4-3.jpg)
+
+![체크포인트 4-4](assets/week4/checkpoint-4-4.jpg)
+
+## 체크포인트 5. Postman으로 동일 요청 테스트
+
+![체크포인트 5-1](assets/week4/checkpoint-5-1.jpg)
