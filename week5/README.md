@@ -13,5 +13,3 @@
   - ![CP5 publish](captures/STEP4_1.png)
   - ![CP5 Docker Hub Tags](captures/STEP4_2.png)
   - ![CP5 pull PASS](captures/STEP4_3.png)
-실제 캡처를 추가할 때 `![CP1](captures/cp1.png)` 형식으로 연결합니다. 다른 조나 발표조의 캡처를 자기 조 결과로 제출하지 않습니다.
-
