@@ -10,7 +10,7 @@ from week4.main import app
 client = TestClient(app)
 SAMPLE = json.loads(Path(__file__).with_name("sample_request.json").read_text())
 
-
+ 
 def test_root():
     response = client.get("/")
     assert response.status_code == 200
@@ -32,4 +32,8 @@ def test_missing_required_field():
     payload.pop("tenure")
     response = client.post("/predict", json=payload)
     assert response.status_code == 422
-    assert any(e["loc"] == ["body", "tenure"] for e in response.json()["detail"])
+    assert any(
+        e["loc"] == ["body", "tenure"]
+        for e in response.json()["detail"]
+    )
+
