@@ -158,8 +158,8 @@ docker rm -f week5-hub
 ### 우리 조 결과 기록
 
 - 조 번호 / 참여자:
-- 제출 커밋:
-- Actions 성공 실행 링크:
+- 제출 커밋: `543f532` (Add API tests and Docker CI)
+- Actions 성공 실행 링크: https://github.com/uriyoung11/bitamin-mlops-3/actions/runs/44288757401
 - Docker Hub 이미지 링크: `https://hub.docker.com/r/실제_Docker_ID/bitamin-mlops-week5`
 - 이미지 태그 / digest:
 - CP1 캡처:
